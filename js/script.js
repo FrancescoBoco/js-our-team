@@ -50,3 +50,8 @@ const usersArray = [
 
 ]
 
+console.log('array users' , usersArray, typeof usersArray)
+
+for(let key in usersArray){
+    console.log('stampa array object', key , usersArray[key])
+}
