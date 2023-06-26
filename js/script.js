@@ -50,8 +50,35 @@ const usersArray = [
 
 ]
 
+
 console.log('array users' , usersArray, typeof usersArray)
 
-for(let key in usersArray){
-    console.log('stampa array object', key , usersArray[key])
+let myContainer = document.getElementById('container')
+
+
+
+// for(let key in usersArray){
+
+//     let newCell = document.createElement('div');
+//     newCell.append(usersArray[key])
+//     newCell.classList.add('cell');
+//     myContainer.append(newCell)
+
+//     console.log('stampa array object', key , usersArray[key])
+// }
+
+// for (let i = 0; i < usersArray.length; i++) {
+//     console.log('array', usersArray, typeof usersArray )
+    
+// }
+for (let i = 0; i < usersArray.length; i++) {
+    const element = usersArray[i];
+    
+    for (const key in element) {
+        console.log(key, element[key]);
+        let newCell = document.createElement('div');
+        newCell.append(element[key])
+        newCell.classList.add('cell');
+        myContainer.append(newCell)
+    }
 }
